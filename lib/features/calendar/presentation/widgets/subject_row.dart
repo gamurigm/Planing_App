@@ -28,9 +28,9 @@ class SubjectRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // Fila de título de la materia
+        // Fila de título de la materia (compacta)
         Container(
-          height: 40,
+          height: 36,
           color: AppColors.primary,
           child: Row(
             children: [
@@ -43,7 +43,7 @@ class SubjectRow extends StatelessWidget {
                   style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 14,
+                    fontSize: 13,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -52,7 +52,7 @@ class SubjectRow extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     border: Border(
-                      left: BorderSide(color: AppColors.verticalDivider, width: 0.5),
+                      left: BorderSide(color: AppColors.subtleGrid, width: 0.5),
                     ),
                   ),
                 ),
@@ -66,7 +66,7 @@ class SubjectRow extends StatelessWidget {
             height: cellHeight,
             decoration: BoxDecoration(
               border: Border(
-                bottom: BorderSide(color: AppColors.verticalDivider, width: 0.5),
+                bottom: BorderSide(color: AppColors.subtleGrid, width: 0.5),
               ),
             ),
             child: Row(
@@ -79,7 +79,7 @@ class SubjectRow extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: AppColors.activityLabelBg,
                       border: Border(
-                        right: BorderSide(color: AppColors.verticalDivider, width: 0.5),
+                        right: BorderSide(color: AppColors.subtleGrid, width: 0.5),
                       ),
                     ),
                   child: Text(

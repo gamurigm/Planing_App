@@ -20,7 +20,7 @@ class CalendarHeader extends StatelessWidget {
     // Now this header only renders the days row (no left column).
     return Container(
       color: AppColors.header,
-      height: 72,
+      height: 56,
       child: Row(
         children: List.generate(month.daysInMonth, (index) {
           final day = index + 1;
@@ -28,11 +28,11 @@ class CalendarHeader extends StatelessWidget {
 
           return Container(
             width: cellWidth,
-            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 4),
+            padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
             decoration: BoxDecoration(
               border: Border(
-                left: BorderSide(color: AppColors.verticalDivider, width: 0.5),
-                right: BorderSide(color: AppColors.verticalDivider, width: 0.5),
+                left: BorderSide(color: AppColors.subtleGrid, width: 0.5),
+                right: BorderSide(color: AppColors.subtleGrid, width: 0.5),
               ),
             ),
             child: Column(
@@ -42,7 +42,7 @@ class CalendarHeader extends StatelessWidget {
                   dayName,
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 11,
+                    fontSize: 10,
                     fontWeight: FontWeight.w500,
                   ),
                   textAlign: TextAlign.center,
@@ -53,7 +53,7 @@ class CalendarHeader extends StatelessWidget {
                   '$day',
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.center,

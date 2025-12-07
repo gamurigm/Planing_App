@@ -56,9 +56,9 @@ class _DayCellState extends State<DayCell> {
       shadows = [
         BoxShadow(
           color: AppColors.neonTurquoiseShadow,
-          blurRadius: 18,
-          spreadRadius: 1.2,
-          offset: const Offset(0, 3),
+          blurRadius: 10,
+          spreadRadius: 0.8,
+          offset: const Offset(0, 2),
         ),
       ];
     } else if (_hovering) {
@@ -67,8 +67,8 @@ class _DayCellState extends State<DayCell> {
       shadows = [
         BoxShadow(
           color: AppColors.neonTurquoiseShadow,
-          blurRadius: 10,
-          spreadRadius: 0.6,
+          blurRadius: 6,
+          spreadRadius: 0.4,
           offset: const Offset(0, 1),
         ),
       ];
@@ -88,16 +88,16 @@ class _DayCellState extends State<DayCell> {
         onTapCancel: () => _setPressed(false),
         onTap: widget.onTap,
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 140),
+          duration: const Duration(milliseconds: 120),
           width: widget.width,
           height: widget.height,
-          padding: const EdgeInsets.all(4),
+          padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 3),
             decoration: BoxDecoration(
             color: bg,
             border: neonBorder ?? Border(
-                left: BorderSide(color: AppColors.verticalDivider, width: 0.5),
-                right: BorderSide(color: AppColors.verticalDivider, width: 0.5),
-                bottom: BorderSide(color: AppColors.verticalDivider, width: 0.5),
+                left: BorderSide(color: AppColors.subtleGrid, width: 0.5),
+                right: BorderSide(color: AppColors.subtleGrid, width: 0.5),
+                bottom: BorderSide(color: AppColors.subtleGrid, width: 0.5),
               ),
             boxShadow: shadows,
           ),
@@ -105,7 +105,7 @@ class _DayCellState extends State<DayCell> {
             child: Text(
               widget.content,
               style: TextStyle(
-                fontSize: 11,
+                fontSize: 10,
                 fontWeight: widget.content.isNotEmpty ? FontWeight.bold : FontWeight.normal,
                 color: textColor,
               ),

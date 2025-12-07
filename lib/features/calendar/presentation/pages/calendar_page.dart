@@ -17,8 +17,8 @@ class CalendarPage extends ConsumerStatefulWidget {
 
 class _CalendarPageState extends ConsumerState<CalendarPage> {
   static const double cellWidth = 120.0;
-  static const double cellHeight = 50.0;
-  static const double firstColumnWidth = 200.0;
+  static const double cellHeight = 42.0;
+  static const double firstColumnWidth = 180.0;
 
   // ScrollController único para sincronizar header y cuerpo en horizontal
   final ScrollController _horizontalScrollController = ScrollController();
@@ -124,10 +124,10 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
-                              // top-left cell
+                              // top-left cell (compact)
                               Container(
-                                height: 72,
-                                padding: const EdgeInsets.all(8),
+                                height: 56,
+                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                                 alignment: Alignment.center,
                                 color: AppColors.header,
                                 child: const Text(
@@ -135,7 +135,7 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 14,
+                                    fontSize: 13,
                                   ),
                                 ),
                               ),
@@ -172,7 +172,7 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
                                           color: AppColors.activityLabelBg,
                                           border: Border(
                                             bottom: BorderSide(
-                                                    color: AppColors.verticalDivider,
+                                                    color: AppColors.subtleGrid,
                                                     width: 0.5,
                                                   ),
                                           ),
@@ -224,14 +224,14 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
                                       ) {
                                         return Column(
                                           children: [
-                                            // subject title spacer (aligns with left sidebar)
+                                            // subject title spacer (compact)
                                             Container(
-                                              height: 40,
+                                              height: 36,
                                               decoration: BoxDecoration(
                                                 color: AppColors.stripBg,
                                                 border: Border(
                                                   bottom: BorderSide(
-                                                    color: AppColors.verticalDivider,
+                                                    color: AppColors.subtleGrid,
                                                     width: 0.5,
                                                   ),
                                                 ),
